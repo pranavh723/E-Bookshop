@@ -6,11 +6,11 @@ $query_builder = TRUE;
 
 $db['default'] = array(
         'dsn'   => '',
-        'hostname' => 'localhost',
-        'username' => 'root',        // Standard free XAMPP username
-        'password' => '',            // Standard free XAMPP password
-        'database' => 'ebookshop',   // The name of your database
-        'dbdriver' => 'mysqli',      // Changed from 'postgre' to 'mysqli'
+        'hostname' => getenv('PGHOST'),
+        'username' => getenv('PGUSER'),
+        'password' => getenv('PGPASSWORD'),
+        'database' => getenv('PGDATABASE'),
+        'dbdriver' => 'postgre',
         'dbprefix' => '',
         'pconnect' => FALSE,
         'db_debug' => (ENVIRONMENT !== 'production'),
@@ -23,5 +23,6 @@ $db['default'] = array(
         'compress' => FALSE,
         'stricton' => FALSE,
         'failover' => array(),
-        'save_queries' => TRUE
+        'save_queries' => TRUE,
+    'port' => getenv('PGPORT')
 );
