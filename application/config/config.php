@@ -5,9 +5,9 @@ $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' :
 $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost:5000';
 $config['base_url'] = $protocol . '://' . $host . '/';
 
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
-$config['uri_protocol'] = 'REQUEST_URI';
+$config['uri_protocol'] = 'AUTO';
 
 $config['url_suffix'] = '';
 
