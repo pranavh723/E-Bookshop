@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- jQuery min js -->
     <script type="text/javascript" src="<?= base_url('tool/js/jquery-3.2.1.slim.min.js'); ?>"></script>
 
-    <title>Bookshop | User pages</title>
+    <title>Hamsafar Book Center | User pages</title>
     <link rel="shortcut icon" type="image/png" href="<?= base_url('tool/img/favicon.png'); ?>">
 </head>
 
@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="welcome-tx">Welcome to Online Book Shop !</div>
+                        <div class="welcome-tx">Welcome to Hamsafar Book Center !</div>
                     </div>
                     <div class="col-md-6">
                         <div class="social-icon">
@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row">
                     <div class="col-md-5">
                         <div class="logo">
-                            <div class="lname"><a href="<?= base_url()?>home"><span><img src="<?= base_url('tool/img/favicon.png')?>"> Bookshop</span> & E-learning</a></div>
+                            <div class="lname"><a href="<?= base_url()?>home"><span><img src="<?= base_url('tool/img/favicon.png')?>"> Hamsafar</span> Book Center</a></div>
                         </div>
                     </div>
                     <div class="col-md-7">
