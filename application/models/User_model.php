@@ -48,7 +48,7 @@ class user_model extends CI_Model
                 /*=== SQL join and Data filter ===*/
                 $this->db->select('*');
                 $this->db->from('category');
-                $this->db->join('books', 'books.categoryId = category.id');
+                $this->db->join('books', 'books.categoryid = category.id');
                 if(isset($_GET['ctg']))
                 {
                         $a = $_GET['ctg'];
@@ -90,7 +90,7 @@ class user_model extends CI_Model
         public function cse_books()
         {
                 $this->db->limit(6);
-                $this->db->where('categoryId', '1');
+                $this->db->where('categoryid', '1');
                 $this->db->order_by('id', 'DESC');
                 $this->db->where('status', 1);
                 $query = $this->db->get('books');
@@ -109,7 +109,7 @@ class user_model extends CI_Model
                         'publisher' => $this->input->post('publisher'),
                         'price' => $this->input->post('price'),
                         'quantity' => $this->input->post('quantity'),
-                        'categoryId' => $this->input->post('categoryId'),
+                        'categoryid' => $this->input->post('categoryId'),
                         'book_image' => $image_path,
                         'userId' => $this->session->userdata('id'),
                 );
@@ -124,7 +124,7 @@ class user_model extends CI_Model
                 /*=== SQL join ===*/
                 $this->db->select('*');
                 $this->db->from('category');
-                $this->db->join('books', 'books.categoryId = category.id');
+                $this->db->join('books', 'books.categoryid = category.id');
 
                 $this->db->order_by('books.id', 'DESC');
                 $this->db->where('books.userId', $this->session->userdata('id'));
@@ -233,7 +233,7 @@ class user_model extends CI_Model
                 /*=== SQL join and Data filter ===*/
                 $this->db->select('*');
                 $this->db->from('category');
-                $this->db->join('ebooks', 'ebooks.categoryId = category.id');
+                $this->db->join('ebooks', 'ebooks.categoryid = category.id');
                 if(isset($_GET['ctg']))
                 {
                         $a = $_GET['ctg'];
