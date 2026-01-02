@@ -17,9 +17,9 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 /vendor/
 
 # IDE Files
-#-------------------------
 /nbproject/
 .idea/*
+.vscode/
 
 ## Sublime Text cache files
 *.tmlanguage.cache
@@ -29,3 +29,13 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
+
+# OS
+Thumbs.db
+
+# Temp files
+*.swp
+*.swo
+*~
+*.log
+*.cache
