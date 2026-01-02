@@ -13,11 +13,20 @@ if ($uri !== '/' && file_exists(__DIR__ . $uri)) {
 // 2. Normalize server variables for CodeIgniter 3
 $_SERVER['SCRIPT_NAME'] = '/index.php';
 
-// If we are at root, or the URI doesn't contain index.php, force it
-if ($uri == '/' || $uri == '' || strpos($uri, '/index.php') !== 0) {
-    $target_uri = ($uri == '/' || $uri == '') ? '/home' : $uri;
-    $_SERVER['REQUEST_URI'] = '/index.php' . $target_uri;
-    $_SERVER['PHP_SELF'] = '/index.php' . $target_uri;
+// Force the URI to be handled by index.php
+// If we are at root, go to /index.php/home
+if ($uri == '/' || $uri == '') {
+    $_SERVER['REQUEST_URI'] = '/index.php/home';
+    $_SERVER['PHP_SELF'] = '/index.php/home';
+} else {
+    // If index.php is not present in the URI, prepend it
+    if (strpos($uri, '/index.php') !== 0) {
+        $_SERVER['REQUEST_URI'] = '/index.php' . $uri;
+        $_SERVER['PHP_SELF'] = '/index.php' . $uri;
+    } else {
+        $_SERVER['REQUEST_URI'] = $uri;
+        $_SERVER['PHP_SELF'] = $uri;
+    }
 }
 
 require_once __DIR__ . '/index.php';
