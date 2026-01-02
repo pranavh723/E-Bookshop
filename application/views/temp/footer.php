@@ -3,13 +3,13 @@
         <div id="s-footer">
             <div class="col-md-12 col-sm-12">
             <div class="footer-text">
-                    <p><i class="fas fa-copyright"></i> Project By Jignesh Ameta <br>
-                        Email: jignesh.vison.17@gmail.com</p>
+                    <p><i class="fas fa-copyright"></i> Hamsafar Book Center <br>
+                        Email: info@hamsafarbooks.com</p>
                 </div>
                 <div id="social-icon">
-                    <span><a href="https://www.facebook.com/jignesh.ameta.9/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
-                    <span><a href="https://github.com/" title="Github" target="_blank"><i class="fab fa-github"></i></a></span>
-                    <span><a href="https://www.linkedin.com/in/jignesh-ameta-621772134/" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></span>
+                    <span><a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
+                    <span><a href="#" title="Github" target="_blank"><i class="fab fa-github"></i></a></span>
+                    <span><a href="#" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></span>
                 </div>
             </div>
         </div>

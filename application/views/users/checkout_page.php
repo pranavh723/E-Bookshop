@@ -58,12 +58,6 @@ if($this->session->flashdata('success'))
                                             Cash on Delivery (COD)
                                         </label>
                                     </div>
-                                    <div class="form-check custom-radio mb-2">
-                                        <input class="form-check-input" type="radio" name="paymentcheck" id="online" value="Online">
-                                        <label class="form-check-label" for="online">
-                                            Online Payment (Razorpay/Stripe)
-                                        </label>
-                                    </div>
                                     <div class="text-danger small"><?= form_error('paymentcheck')?></div>
                                 </div>
                                 
