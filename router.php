@@ -12,4 +12,6 @@ if ($uri !== '/' && file_exists(__DIR__ . $uri)) {
 
 // Pass all other requests to index.php
 $_SERVER['SCRIPT_NAME'] = '/index.php';
+$_SERVER['PHP_SELF'] = '/index.php';
+
 require_once __DIR__ . '/index.php';
