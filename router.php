@@ -13,6 +13,7 @@ if ($uri !== '/' && file_exists(__DIR__ . $uri)) {
 // 2. Normalize server variables for CodeIgniter 3
 $_SERVER['SCRIPT_NAME'] = '/index.php';
 
+// Force the URI to be handled by index.php
 // If we are at root, go to /index.php/home
 if ($uri == '/' || $uri == '') {
     $_SERVER['REQUEST_URI'] = '/index.php/home';
