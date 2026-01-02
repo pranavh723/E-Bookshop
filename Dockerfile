@@ -15,6 +15,9 @@ RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/a
 # Set ServerName to suppress the warning
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
+# Allow Override for .htaccess
+RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/AllowOverride All/' /etc/apache2/apache2.conf
+
 # Copy project files to the Apache document root
 COPY . /var/www/html/
 
