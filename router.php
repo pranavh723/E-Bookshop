@@ -18,7 +18,6 @@ if (empty($uri) || $uri[0] !== '/') {
 }
 
 // 2. Serve static files directly if they exist
-// We ensure we don't try to serve directory indexes as static files
 if ($uri !== '/' && !is_dir(__DIR__ . $uri) && file_exists(__DIR__ . $uri)) {
     return false;
 }
