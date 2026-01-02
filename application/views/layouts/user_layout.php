@@ -39,10 +39,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div class="col-md-6">
                         <div class="social-icon">
-                            <span>Follow : </span>
-                                <a href="https://www.facebook.com/jignesh.ameta.9/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://github.com/" title="Github" target="_blank"><i class="fab fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/jignesh-ameta-621772134/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <span>Follow Us : </span>
+                                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" title="Github" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
