@@ -35,4 +35,7 @@ if ($uri !== '/' && file_exists(__DIR__ . $uri)) {
 
 // Pass all other requests to CodeIgniter
 $_SERVER['SCRIPT_NAME'] = '/index.php';
+// For built-in server, we need to handle the index.php correctly
+$_SERVER['PHP_SELF'] = '/index.php' . $uri;
+
 require_once __DIR__ . '/index.php';
