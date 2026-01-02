@@ -9,13 +9,17 @@ RUN apt-get update && apt-get install -y \
 # Enable Apache mod_rewrite for CodeIgniter's clean URLs
 RUN a2enmod rewrite
 
+# Update Apache configuration to listen on the port provided by Render
+RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
+
+# Set ServerName to suppress the warning
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 # Copy project files to the Apache document root
 COPY . /var/www/html/
 
 # Set correct permissions
 RUN chown -R www-data:www-data /var/www/html
 
-# Expose port 80 (Apache default)
-EXPOSE 80
-
 # The default entrypoint for php:apache is already configured to run Apache
+CMD ["apache2-foreground"]
