@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
 $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost:5000';
-$config['base_url'] = '';
+$config['base_url'] = (isset($_SERVER['HTTP_HOST'])) ? $protocol . '://' . $_SERVER['HTTP_HOST'] . '/' : '';
 
 $config['index_page'] = 'index.php';
 
