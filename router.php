@@ -15,7 +15,7 @@ $_SERVER['SCRIPT_NAME'] = '/index.php';
 
 // Force the URI to be handled by index.php
 // If we are at root, go to /index.php/home
-if ($uri == '/' || $uri == '') {
+if ($uri == '/' || $uri == '' || $uri == '/index.php' || $uri == '/index.php/') {
     $_SERVER['REQUEST_URI'] = '/index.php/home';
     $_SERVER['PHP_SELF'] = '/index.php/home';
 } else {
