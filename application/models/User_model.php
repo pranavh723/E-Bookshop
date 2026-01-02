@@ -169,12 +169,15 @@ class user_model extends CI_Model
                 $total = $this->cart->total();
                 $total_price = $total + $shipping;
                 
+                $a = array();
+                $q = array();
                 foreach ($this->cart->contents() as $items) {
                         $a[] = $items['id'];
-                        $books = implode(', ', $a);
-
                         $q[] = $items['qty'];
-                        $quantity = implode(', ', $q);
+                }
+
+                $books = implode(', ', $a);
+                $quantity = implode(', ', $q);
 
                 $data = array(
                         'userId'        => $this->session->userdata('id'),
@@ -193,7 +196,6 @@ class user_model extends CI_Model
                         'quantity' => $quantity
 
                 );
-        }
 
                 $insert_order = $this->db->insert('orders', $data);
                 return $insert_order;
